@@ -1,0 +1,17 @@
+几个面试时候需要熟练掌握的sorting algorithm
+Bubble sort
+Shell sort/Insertion Sort
+Selection Sort   很重要，代表了一类双指针栈间问题的解法和思考方式
+    每一次来选剩下的还没拍完序的最小值来不断填充，完成排序
+    实际上可以想成从第一个数字开始，依次对比后面的数字，只要发现更小的，就替换掉这个数字，第一轮循环后，第一个数字就是最小的数字
+    然后从第二个数字再做同样的对比，直到所有数字都对比完
+
+
+Quick Sort
+Count Sort
+Heap Sort
+Bucket Sort
+Merge Sort
+    理解起来比较困难。首先是半劈，再半劈，一直半劈到最小单位，然后不断对比，然后再糅合，最后得到sorted array
+
+Sorting最重要的一步是确定我们sorting的order，确定"大小规则"

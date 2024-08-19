@@ -1,0 +1,29 @@
+Start & Last position of target
+    1 Search for a range (Leet code 34)
+    2 First position of Target
+    3 Last position of Target
+
+    把这个题掰开了，与其一下子找到第一个和最后一个，不然先只找第一个。
+    找第一个的几个想法：找分界线 找小于target和等于target的分界线。那么我们就可以用binarySearch的分界线方法（solution 3 大弓）
+
+    现在会写first position了，也会写last position了，我们有两种方案。一种是合并两个代码，写两编。
+    第二种是我一直扫，扫到有target开始再一只扫到没有target的情况。
+        这两种方法中，时间复杂度的概念上来讲是option 1 比较好， O(logN)
+        第二种方法，一直遍历，时间复杂度是 O(N)，因为最糟糕的情况是一整个数组都是我的target
+            假设我的target是3 那这个数组可能是 3，3，3，3，3，3，3，3，3
+
+        然而面试的时候要搞清楚面试官的想法，如果限定条件不同，option 2可能会比较好
+        例如，假设面试官给个限定条件，说，我的数组中重复的目标个数不超过k个，那么时间复杂度就变成了O(k)
+        根据k和N的大小，有可能产生 O(k)<O(log(N))的情况，那option2就比较好
+
+
+Closest Position of Target
+    之前的题是找得到返回index，找不到返回-1
+    现在我们变一下，找到了返回target，找不到返回最近值
+    但是最近值可能不止一个
+    这个时候就要问面试官clarify
+        假设问题是  1，3，3，3，3，3，3，3，9    target是4
+        那返回的就是一个int array 3，3，3，3，3，3，3
+
+        但如果面试官说 数组中没有重复值 例如 1，2，3，6，7 target是4
+        那返回值就是 int 3
